@@ -32,7 +32,7 @@ namespace AriBilgi.ArticleApp
             services.AddControllersWithViews();
             services.AddDbContext<ArticleContext>(opt =>
             {
-                opt.UseSqlServer(@"Server=TORAMAN;Database=ArticleAppDb;Trusted_Connection=True;");
+                opt.UseSqlServer(@"Server=176.53.69.151\MSSQLSERVER2019;Database=yazili83_ArticleAppDb;User Id=yazili83_toraman;Password=0W2@k12rh;");
             });
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
