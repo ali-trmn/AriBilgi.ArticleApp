@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3>Makale Yaz</h3>
+<div class="row mt-3">
+    <form action="/AddArticle/AddText" method="post">
+<div class="input-group mb-3">
+      <div class="input-group-prepend">
+    <span class="input-group-text">Makale Adı</span>
+  </div>
+  <input type="text" name="Title" class="form-control" placeholder="Makale Adı" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+      <div class="input-group-prepend">
+    <span class="input-group-text">Yazar</span>
+  </div>
+  <input type="text" name="Author" class="form-control" placeholder="Yazar İsmi" aria-label="Recipient's username" aria-describedby="basic-addon2">
+</div>
+
+<div class="mb-3">
+<select class="form-select" name="Category" aria-label="Default select example">
+  <option selected disabled>Katagori seçimi</option>
+  <option value="1">Bilim</option>
+  <option value="2">Teknoloji</option>
+  <option value="3">Tarih</option>
+  <option value="3">Sağlık</option>
+</select>
+</div>
+
+<div class="input-group">
+  <span class="input-group-text">Makale İçeriği</span>
+  <textarea class="form-control pb-5" name="Text" aria-label="Makale İçeriği"></textarea>
+</div>
+
+<button type="submit"class="btn btn-primary mt-3">Makale Ekle</button>
+
+</form>
+
+</div>

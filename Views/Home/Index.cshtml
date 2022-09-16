@@ -1,0 +1,26 @@
+﻿@using AriBilgi.ArticleApp.Data.Entities
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Article>
+
+@{
+    foreach (Article item in Model)
+    {
+
+        <div class="card mt-3">
+          <div class="card-header">
+            @item.Title
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+            <p><getShortText application-user-id-html="@item.Id"> </getShortText>...</p>
+            <P><a href="/Home/TextDetail?ArticleId=@item.Id" class="btn btn-outline-secondary btn-sm">Devamını oku</a></P>
+              <footer class="blockquote-footer">@item.Author <cite title="Source Title">@item.dateTime</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+
+    }
+}
+
